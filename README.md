@@ -19,7 +19,7 @@ pnpm i && pnpm dev
 ## 技术栈
 - 主要开发语言: Vue3, TypeScript, SCSS
 - 框架: Vite
-- 图片生成: dom-to-image
+- 图片生成: ModernScreenshot
 - 使用的样式表: Pico CSS, Google reCaptcha 样式表
 
 ## 许可
