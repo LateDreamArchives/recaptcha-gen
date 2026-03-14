@@ -24,8 +24,8 @@ const debugInfo = {
 		bit: info.bitness,
 	},
 	browser: {
-		name: brands[brands.length - 1].brand,
-		version: brands[brands.length - 1].version,
+		name: brands[0].brand,
+		version: brands[0].version,
 	}
 };
 Object.defineProperty(debugInfo, 'debug', {
