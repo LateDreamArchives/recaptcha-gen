@@ -36,14 +36,25 @@ export default <UserConfig>{
 		modulePreload: {
 			polyfill: true
 		},
-		rollupOptions: {
+		rolldownOptions: {
+			// output: {
+			// 	manualChunks: {
+			// 		'libs/vue': ['vue'],
+			// 		'libs/modern-screenshot': ['modern-screenshot'],
+			// 		'libs/file-helper': ['@libs/file-helper'],
+			// 		'libs/system-checker': ['@libs/browser.min'],
+			// 		'libs/shared-api': ['@libs/shared-api'],
+			// 	}
+			// }
 			output: {
-				manualChunks: {
-					'libs/vue': ['vue'],
-					'libs/modern-screenshot': ['modern-screenshot'],
-					'libs/file-helper': ['@libs/file-helper'],
-					'libs/system-checker': ['@libs/browser.min'],
-					'libs/shared-api': ['@libs/shared-api'],
+				codeSplitting: {
+					groups: [
+						{ name: 'libs/vue', test: /node_modules\/vue/ },
+						{ name: 'libs/modern-screenshot', test: /node_modules\/modern-screenshot/ },
+						{ name: 'libs/file-helper', test: /node_modules\/@libs\/file-helper/ },
+						{ name: 'libs/system-checker', test: /node_modules\/@libs\/browser.min/ },
+						{ name: 'libs/shared-api', test: /node_modules\/@libs\/shared-api/ },
+					]
 				}
 			}
 		}
