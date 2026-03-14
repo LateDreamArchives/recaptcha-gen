@@ -80,7 +80,7 @@ defineExpose({
 						<table class="rc-imageselect-table-33">
 							<tbody v-if="singlePicMode">
 								<img @click="setImg(($event.target as HTMLImageElement))"
-									 src="https://about.latedream.cn/assets/statics/avatar.webp"
+									 src="https://assets.latedream.qzz.io/avatars/latedream/current.webp"
 									 id="single-pic" :style="{objectFit: singlePicFillMode}" />
 								<tr v-for="index in picNum2.y.value" :key="index" style="pointer-events: none;">
 									<td v-for="index in picNum2.x.value" :key="index" role="button" class="rc-imageselect-tile" aria-label="图片验证"
@@ -95,7 +95,7 @@ defineExpose({
 										<div class="rc-image-tile-target">
 											<div class="rc-image-tile-wrapper" style="width: 126px; height: 126px">
 												<img @click="setImg(($event.target as HTMLImageElement))" class="rc-image-tile-33"
-													src="https://about.latedream.cn/assets/statics/avatar.webp"
+													src="https://assets.latedream.qzz.io/avatars/latedream/current.webp"
 													alt="" style="top:0%;">
 												<div class="rc-image-tile-overlay"></div>
 											</div>
